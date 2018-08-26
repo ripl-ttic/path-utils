@@ -1,20 +1,10 @@
-This is a default README file, please replace its contents with information
-relevant to your project.
+# Path Utils
 
-This software is constructed according to the Pods software policies and
-templates.  The policies and templates can be found at:
+A library for querying various project-specific paths
 
-  http://sourceforge.net/projects/pods
+The code follows the pods build framework (https://sourceforge.net/p/pods/home/Home/).
 
-====
+## Requirements
 
-Name:         path-util
-Maintainers:  FILL-ME-IN
-Summary:      FILL-ME-IN
-Description:
-  FILL-ME-IN
-
-Requirements: 
-  FILL-ME-IN
-
-License:      FILL-ME-IN
+* CMake
+* Python
