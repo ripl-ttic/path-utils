@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.6.0)
 
 # pull in the pods macros. See cmake/pods.cmake for documentation
-set(POD_NAME path-util)
+set(POD_NAME path-utils)
 include(cmake/pods.cmake)
 
 # The BASE_PATH is where the models, data, config, etc. directories are located
