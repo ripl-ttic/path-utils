@@ -31,3 +31,9 @@ getModelsPath()
 {
     return BASE_PATH "/models";
 }
+
+const char *
+getMapsPath()
+{
+    return BASE_PATH "/maps";
+}

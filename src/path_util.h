@@ -11,6 +11,7 @@ const char * getBasePath();
 const char * getDataPath();
 const char * getModelsPath();
 const char * getConfigPath();
+const char * getMapsPath();
 
 
 #ifdef __cplusplus

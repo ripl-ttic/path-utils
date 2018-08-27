@@ -1,10 +1,12 @@
 # require python
 find_package(PythonInterp REQUIRED)
 # write python file in python/
-file(WRITE ${CMAKE_CURRENT_SOURCE_DIR}/path_util/path_util.py "def getBasePath(): return '${CMAKE_INSTALL_PREFIX}'\n"
-                               "def getDataPath(): return '${CMAKE_INSTALL_PREFIX}/data'\n"
-                               "def getConfigPath(): return '${CMAKE_INSTALL_PREFIX}/config'\n"
-                               "def getModelsPath(): return '${CMAKE_INSTALL_PREFIX}/models'\n")
+file(WRITE ${CMAKE_CURRENT_SOURCE_DIR}/path_util/path_util.py
+    "def getBasePath(): return '${BASE_PATH}'\n"
+    "def getDataPath(): return '${BASE_PATH}/data'\n"
+    "def getConfigPath(): return '${BASE_PATH}/config'\n"
+    "def getModelsPath(): return '${BASE_PATH}/models'\n"
+    "def getMapsPath(): return '${BASE_PATH}/maps'\n")
 
 # install the python file
 pods_install_python_packages(${CMAKE_CURRENT_SOURCE_DIR})
@@ -13,14 +15,14 @@ pods_install_python_packages(${CMAKE_CURRENT_SOURCE_DIR})
 # python module install path
 set(script_name "python-pods")
 # which python version?
-execute_process(COMMAND 
+execute_process(COMMAND
     ${PYTHON_EXECUTABLE} -c "import sys; sys.stdout.write(sys.version[:3])"
     OUTPUT_VARIABLE pyversion)
 
 # where do we install .py files to?
-set(python_install_dir 
+set(python_install_dir
     ${CMAKE_INSTALL_PREFIX}/lib/python${pyversion}/dist-packages)
-set(python_old_install_dir 
+set(python_old_install_dir
     ${CMAKE_INSTALL_PREFIX}/lib/python${pyversion}/site-packages)
 
 # write the script file
