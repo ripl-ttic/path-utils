@@ -1,4 +1,4 @@
-${POD_NAME}add_definitions(-DBASE_PATH="${BASE_PATH}")
+add_definitions(-DBASE_PATH="${BASE_PATH}")
 add_library(${POD_NAME} SHARED path_util.c)
 
 # make the shared library public
